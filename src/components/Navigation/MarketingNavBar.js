@@ -3,26 +3,24 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-class MarketingNavBar extends React.Component{
-  showLogin(){
-  }
+export default class MarketingNavBar extends React.Component{
 
   render(){
     return (
       <Navbar collapseOnSelect fixedTop className="mainMenu">
         <Navbar.Header>
           <Navbar.Brand >
-            <a href="#"><img src="../images/logo.png" alt="University.Social"/></a>
+            <a href="#"><img src="images/logo.png" alt="University.Social"/></a>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
             <MenuItem>
-              <Link to={'/'}>About Us</Link>
+              <a href="">About Us</a>
             </MenuItem>
             <MenuItem>
-              <Link to={'/'}>Contact</Link>
+              <a href="">Contact</a>
             </MenuItem>
             <MenuItem>
               <a className="loginBtn" onClick={this.props.openLoginModal}>Login</a>
@@ -32,15 +30,4 @@ class MarketingNavBar extends React.Component{
       </Navbar>
     )
   }
-}
-
-
-export default connect(state => ({
-  
-}, mapDispatch))(MarketingNavBar);
-
-
-const mapDispatch = (dispatch) => {
-    const allActionProps = Object.assign({}, dispatch);
-    return allActionProps;
 }

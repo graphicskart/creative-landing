@@ -1,15 +1,13 @@
 import React from 'react'
-import { push } from 'react-router-redux'
-import ReactDOM from 'react-dom'
-import { bindActionCreators } from 'redux'
 import {Grid, Col, Row, Button, Modal, FormGroup, FormControl} from 'react-bootstrap'
 import MarketingNavBar from '../../components/Navigation/MarketingNavBar'
 import {IsValidForm} from '../../components/common/validation'
 import scrollToComponent from 'react-scroll-to-component';
 import { connect } from 'react-redux'
+import '../../index.css'
 
 
- class HomePage extends React.Component{
+ export default class HomePage extends React.Component{
   constructor(props){
     super(props);
     this.state ={
@@ -308,22 +306,5 @@ import { connect } from 'react-redux'
         </div>
       )
   }
- } 
-
-
-const mapStateToProps = state => ({})
-
-export default connect(
-  state => (
-    {
-      
-    },
-    mapDispatch
-  )
-)(HomePage)
-
-const mapDispatch = dispatch => {
-  const allActionProps = Object.assign({}, dispatch)
-  return allActionProps
-}
+ }
 
