@@ -1,20 +1,11 @@
 var express=require('express');
 var bodyParser = require('body-parser')
-var nodemailer = require("nodemailer");
 var app=express();
 app.use(bodyParser.urlencoded({extended:false}))
 /*
     Here we are configuring our SMTP Server details.
     STMP is mail server which is responsible for sending and recieving email.
 */
-var smtpTransport = nodemailer.createTransport({
-    service: "gmail",
-    host: "smtp.gmail.com",
-    auth: {
-        user: "zestgeeksol@gmail.com ",
-        pass: "zestgeek@0987"
-    }
-});
 /*------------------SMTP Over-----------------------------*/
 
 /*------------------Routing Started ------------------------*/
